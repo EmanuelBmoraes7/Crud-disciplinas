@@ -4,7 +4,12 @@ import pytest
 from pytest_bdd import given, when, then, parsers, scenarios
 from app.disciplinas import GerenciadorDisciplinas, DisciplinaError
 
-FEATURES = Path(__file__).parent.parent / "features"
+ROOT = Path(__file__).resolve()
+while ROOT.name != "Crud-disciplinas" and ROOT.parent != ROOT:
+    ROOT = ROOT.parent
+
+FEATURES = ROOT / "features"
+
 scenarios(
     str(FEATURES / "criar_disciplina.feature"),
     str(FEATURES / "ler_disciplina.feature"),
