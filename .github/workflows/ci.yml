@@ -10,10 +10,15 @@ permissions:
   pull-requests: write
 
 jobs:
-  test-and-coverage:
-    name: Testes BDD + Cobertura (≥ 75%)
-    runs-on: ubuntu-latest
-
+   test-and-coverage:
+    - name: Executar testes BDD com cobertura
+      run: |
+          pytest tests/ \
+            --cov=app \
+            --cov-report=term-missing \
+            --cov-report=xml:coverage.xml \
+            --cov-fail-under=75 \
+            -v
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
