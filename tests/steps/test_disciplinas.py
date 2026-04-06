@@ -1,17 +1,13 @@
 from datetime import date
-from pathlib import Path
 import pytest
 from pytest_bdd import given, when, then, parsers, scenarios
 from app.disciplinas import GerenciadorDisciplinas, DisciplinaError
 
-# Sobe de tests/steps/ para a raiz do projeto
-FEATURES = Path(__file__).resolve().parent.parent.parent / "features"
-
 scenarios(
-    str(FEATURES / "criar_disciplina.feature"),
-    str(FEATURES / "ler_disciplina.feature"),
-    str(FEATURES / "atualizar_disciplina.feature"),
-    str(FEATURES / "deletar_disciplina.feature"),
+    "criar_disciplina.feature",
+    "ler_disciplina.feature",
+    "atualizar_disciplina.feature",
+    "deletar_disciplina.feature",
 )
 
 @pytest.fixture
