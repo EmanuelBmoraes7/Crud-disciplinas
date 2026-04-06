@@ -4,7 +4,7 @@ import pytest
 from pytest_bdd import given, when, then, parsers, scenarios
 from app.disciplinas import GerenciadorDisciplinas, DisciplinaError
 
-FEATURES = Path(__file__).parent.parent.parent / "features"
+FEATURES = Path(__file__).parent.parent / "features"
 scenarios(
     str(FEATURES / "criar_disciplina.feature"),
     str(FEATURES / "ler_disciplina.feature"),
