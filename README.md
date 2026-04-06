@@ -2,12 +2,12 @@
 
 Gerenciador de disciplinas para instituições de ensino, com testes BDD e esteira de CI automatizada.
 
-## Estrutura do Projeto
+Estrutura do Projeto
 
 ```
 crud-disciplinas/
 ├── app/
-│   └── disciplinas.py          # Lógica de negócio (CRUD)
+│   └── disciplinas.py          
 ├── features/
 │   ├── criar_disciplina.feature
 │   ├── ler_disciplina.feature
@@ -16,10 +16,10 @@ crud-disciplinas/
 ├── tests/
 │   ├── conftest.py
 │   └── steps/
-│       └── test_disciplinas.py  # Step definitions BDD
+│       └── test_disciplinas.py  
 ├── .github/
 │   └── workflows/
-│       └── ci.yml              # Pipeline de CI (cobertura ≥ 75%)
+│       └── ci.yml             
 ├── pytest.ini
 ├── requirements.txt
 └── README.md
